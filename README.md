@@ -30,7 +30,6 @@ creative-acoustics/
 
 ## Before launch
 
-- [ ] **Contact details:** replace `EMAIL_TO_CONFIRM` / `[Email to confirm]` and `PHONE_TO_CONFIRM` / `[Phone to confirm]` in `index.html`.
 - [ ] **Services copy:** confirm the offering lists match what James actually offers.
 - [ ] **Social sharing:** once the live domain is known, change `og:image` to an absolute URL (for example `https://yourdomain/assets/img/gallery/guitar-burl-angle.jpg`).
 

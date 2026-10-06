@@ -3,14 +3,16 @@
    ========================================================== */
 
 :root {
-  --bg: #0e0b09;
-  --bg-alt: #16110e;
-  --surface: #1d1713;
-  --line: #3a2c22;
+  --bg: #0d0906;
+  --bg-alt: #171009;
+  --surface: #20160e;
+  --line: #47311d;
   --copper: #c07a45;
-  --copper-light: #e0a473;
-  --text: #efe6da;
-  --muted: #b3a393;
+  --copper-light: #e8a97c;
+  --gold: #f0c987;
+  --ember: #9c3f1f;
+  --text: #f5ecdd;
+  --muted: #b7a58e;
   --radius: 10px;
   --header-h: 76px;
   --container: 1180px;

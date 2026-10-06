@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#1e1109"/>
+  <linearGradient id="fg" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f0c987"/><stop offset="1" stop-color="#c07a45"/>
+  </linearGradient>
+  <text x="32" y="42" text-anchor="middle" font-family="Georgia, serif" font-weight="700" font-size="30" fill="url(#fg)">CA</text>
+</svg>
