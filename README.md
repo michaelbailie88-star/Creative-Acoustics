@@ -49,3 +49,18 @@ Domain registration and hosting are the client's responsibility.
 ---
 
 © Creative Acoustics Ltd.
+
+## Contact form (sends from the page)
+
+The "Tell James What You're After" form sends straight to **creativeacousticsluthier@gmail.com**
+through [FormSubmit](https://formsubmit.co) (`https://formsubmit.co/ajax/…`, set in `js/main.js`
+as `JAMES_EMAIL`). Nothing opens the visitor's mail app. The visitor picks what they are after,
+adds their name, email and a message, and presses **Send to James**; a thank-you line appears in
+the form and the visitor gets an automatic reply.
+
+- **First use:** the first message sent from a new web address triggers a one-time
+  "Activate Form" email from FormSubmit to the inbox above. Click the link in it once; every
+  message after that is delivered normally.
+- The email address shown in the contact list jumps to this form.
+- To change the destination inbox, change `JAMES_EMAIL` in `js/main.js` and the `action` on
+  `#build-form` in `index.html`.

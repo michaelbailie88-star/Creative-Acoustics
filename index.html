@@ -428,7 +428,7 @@
           <h2>Start a Build</h2>
           <p>Have an instrument in mind, or want a set of knobs to match the one you already play? Get in touch and tell me what you're after.</p>
           <ul class="contact-list">
-            <li><span class="label">Email</span><a href="mailto:creativeacousticsluthier@gmail.com" target="_blank" rel="noopener" data-testid="email-link">creativeacousticsluthier@gmail.com</a></li>
+            <li><span class="label">Email</span><a href="#build-form" data-testid="email-link">creativeacousticsluthier@gmail.com</a></li>
             <li><span class="label">Shop</span>Falmouth, Nova Scotia</li>
           </ul>
         </div>
@@ -439,7 +439,12 @@
         </div>
       </div>
 
-      <form class="build-form" id="build-form" data-fl-reveal>
+      <form class="build-form" id="build-form" action="https://formsubmit.co/creativeacousticsluthier@gmail.com" method="POST" novalidate data-fl-reveal data-testid="build-form">
+        <input type="hidden" name="_subject" value="Build inquiry - Creative Acoustics website">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Creative Acoustics. James has your message and will be in touch soon. — Creative Acoustics Ltd.">
+        <input type="text" name="_honey" class="bf-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="interested_in" id="bf-interest" value="a custom guitar">
         <h3>Tell James What You're After</h3>
         <div class="form-row" role="radiogroup" aria-label="What are you after?">
           <button type="button" class="chip is-on" data-v="a custom guitar" data-testid="chip-guitar">A custom guitar</button>
@@ -447,11 +452,21 @@
           <button type="button" class="chip" data-v="hand-turned accessories" data-testid="chip-accessories">Accessories</button>
           <button type="button" class="chip" data-v="wood and tone advice" data-testid="chip-wood">Wood &amp; tone advice</button>
         </div>
-        <textarea id="bf-msg" rows="4" aria-label="Your message" placeholder="Tell him about the instrument you're hearing in your head&hellip;"></textarea>
-        <div style="margin-top: 18px;">
-          <button type="submit" class="btn btn-primary" data-testid="open-email-btn">Open Email to James</button>
+        <div class="bf-fields">
+          <div class="bf-field">
+            <label for="bf-name">Your name <span class="bf-req">Required</span></label>
+            <input type="text" id="bf-name" name="name" autocomplete="name" required data-testid="bf-name-input">
+          </div>
+          <div class="bf-field">
+            <label for="bf-email">Your email <span class="bf-req">Required</span></label>
+            <input type="email" id="bf-email" name="email" autocomplete="email" required data-testid="bf-email-input">
+          </div>
         </div>
-        <p class="bf-note" id="bf-note" hidden>Opening your email app with the message ready to send&hellip;</p>
+        <textarea id="bf-msg" name="message" rows="4" aria-label="Your message" placeholder="Tell him about the instrument you're hearing in your head&hellip;" data-testid="bf-message-input"></textarea>
+        <div style="margin-top: 18px;">
+          <button type="submit" class="btn btn-primary" id="bf-send" data-testid="send-btn">Send to James</button>
+        </div>
+        <p class="bf-note" id="bf-note" role="status" aria-live="polite" hidden data-testid="bf-status"></p>
       </form>
 
       <div class="map-card">
