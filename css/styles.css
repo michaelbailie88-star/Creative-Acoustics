@@ -498,3 +498,37 @@ body.no-scroll { overflow: hidden; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition: none !important; }
 }
+
+/* ---------- Studio services (added Oct 2026) ---------- */
+/* five service cards: three on top, the two studio services side by side below */
+.service-grid { grid-template-columns: repeat(6, 1fr); }
+.service-card { grid-column: span 2; }
+.service-card-new { grid-column: span 3; }
+.service-card-new .service-media img { aspect-ratio: 16 / 9; }
+.service-more { display: inline-block; margin-top: 14px; color: var(--gold); font-weight: 600; text-decoration: none; border-bottom: 2px solid var(--copper); }
+.service-more:hover { color: var(--copper-light); }
+
+.studio { background: var(--bg-alt); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.studio-intro { max-width: 60ch; margin: 14px auto 0; color: var(--muted); }
+.studio-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.studio-shot { margin: 0; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; }
+.studio-shot img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; background: #000; }
+.studio-shot figcaption { padding: 22px 24px 26px; }
+.studio-shot h3 { color: var(--copper-light); margin-bottom: 8px; }
+.studio-shot p { color: var(--muted); margin: 0; }
+
+@media (max-width: 1024px) {
+  .service-grid { grid-template-columns: 1fr 1fr; }
+  .service-card, .service-card-new { grid-column: auto; }
+  .service-card-new .service-media img { aspect-ratio: 4 / 3; }
+  .studio-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 720px) {
+  .service-grid, .studio-grid { grid-template-columns: 1fr; }
+  .service-card:last-child { grid-column: auto; }
+}
+/* six nav links: tighten the bar on mid-size screens so it clears the logo */
+@media (min-width: 721px) and (max-width: 1180px) {
+  .site-nav { gap: 16px; padding-left: 12px; padding-right: 12px; }
+  .site-nav a { font-size: 0.8rem; letter-spacing: 0.04em; }
+}
