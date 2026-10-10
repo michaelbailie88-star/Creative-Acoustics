@@ -1334,3 +1334,8 @@ main > .section { position: relative; overflow-x: clip; }
   .map-head { flex-direction: column; align-items: flex-start; }
   .map-open { width: 100%; }
 }
+
+/* ---------- v13: mobile menu button on the right, clear of the bridge ---------- */
+@media (max-width: 720px) {
+  .nav-toggle { margin-left: auto; }
+}
